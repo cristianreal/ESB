@@ -31,14 +31,23 @@ Para desarrollar esta tarea utilizamos lo siguiente:
   8.  Ejecutar el servicio, con el siguiente comando dentro de nuestra consola
   ```
     (venv) C:\Users\Name\Desktop\NameProject>python -m flask run
+     * Serving Flask app "Prueba.py"
+     * Environment: production
+       WARNING: This is a development server. Do not use it in a production deployment.
+       Use a production WSGI server instead.
+     * Debug mode: off
+     * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
   ```
   9.  Parar el servicio, con el siguiente comando dentro de nuestra consola
+  ```
+    Press CTRL+C to quit
+  ```
+  10.  Salir del Entorno Virtual, con el siguiente comando dentro de nuestra consola
   ```
     (venv) C:\Users\Name\Desktop\NameProject>deactivate
     
     C:\Users\Name\Desktop\NameProject>
   ```
-
 ---
 ### Enunciado:
 Realizar una aplicación SOA para simular los siguientes servicios de carros tipo Uber:
