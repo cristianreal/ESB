@@ -52,10 +52,12 @@ Para desarrollar esta tarea utilizamos lo siguiente:
 ### Enunciado:
 Realizar una aplicación SOA para simular los siguientes servicios de carros tipo Uber:
 
-1. Solicitud de servicio por parte del cliente
-2. Recepción de solicitud y aviso al piloto
-3. Solicitud de ubicación (rastreo) desde la administración del servicio de carros
+1. Solicitud de servicio por parte del cliente    [Servicio1](Service1_SolicitudServicioCliente/README.md)
+2. Recepción de solicitud y aviso al piloto       [Servicio2](Service2_SolicitudServicioPiloto/README.md)
+3. Solicitud de ubicación (rastreo) desde la administración del servicio de carros    [Servicio3](Service3_SolicitudRastreo/README.md)
+
 Debe ser realizado con servicios orquestados por medio de un ESB
+
 ---
 
 ### Desarrollo del problema:
@@ -71,4 +73,14 @@ Como se nos pide que realicemos nuestro propio ESB se crea un WebService que cum
 En la siguiente imagen podemos observar la solucion propuesta para la arquitectura de este enunciado:
 
 ![](Images/IMG5.jpg)
+---
+
+### ANEXOS:
+
+1.  https://werkzeug.palletsprojects.com/en/0.14.x/serving/
+2.  https://www.python.org/downloads/
+3.  https://flask.palletsprojects.com/en/1.1.x/
+4.  https://palletsprojects.com/p/flask/
+5.  https://palletsprojects.com/p/jinja/
+
 

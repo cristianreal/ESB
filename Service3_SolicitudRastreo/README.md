@@ -6,7 +6,7 @@
 Este servicio se encuentra alojado en el puerto 8070
 
 ### Desarrollo del problema:
-Este tercer servicio se encargara de notificar a la administracion la ubicacion del piloto para que luego por medio del ESB se pueda responder lo antes poisble al solicitante.
+Este tercer servicio se encargara de notificar a la administracion la ubicacion del piloto para que luego por medio del ESB se pueda responder lo antes poisble.
 
 Este servicio servira para notificar a la administracion sobre la ubicacion del piloto.
 
@@ -15,7 +15,7 @@ Para esta solicion se implementaron los siguientes procedimientos:
 
  |No.|Ruta|Tipo|Parametros||
 |--|----|:--:|:--------:|--------------------------|
-|1|/RastreoPiloto|GET|Ubicacion|https://host:8050/RastreoPiloto?Ubicacion=Yes_No|
+|1|/RastreoPiloto|GET|Ubicacion|https://host:8070/RastreoPiloto?Ubicacion=Yes_No|
 |2|-|-|-|-|
 
 A continuacion se describen el parametro de la ruta /RastreoPiloto:

@@ -15,7 +15,7 @@ Para esta solicion se implementaron los siguientes procedimientos:
 
 |No.|Ruta|Tipo|Parametros||
 |--|----|:--:|:--------:|--------------------------|
-|1|/SolicitudAvisoPiloto|GET|Nombre, Correo, Ubicacion|https://host:8050/SolicitudAvisoPiloto?Nombre=Name1&Correo=Email1&Ubicacion=Address|
+|1|/SolicitudAvisoPiloto|GET|Nombre, Correo, Ubicacion|https://host:8060/SolicitudAvisoPiloto?Nombre=Name1&Correo=Email1&Ubicacion=Address|
 |2|-|-|-|-|
 
 A continuacion se describen los 3 parametros de la ruta /SolicitudAvisoPiloto:
