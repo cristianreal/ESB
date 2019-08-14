@@ -52,9 +52,9 @@ Para desarrollar esta tarea utilizamos lo siguiente:
 ### Enunciado:
 Realizar una aplicación SOA para simular los siguientes servicios de carros tipo Uber:
 
-1. Solicitud de servicio por parte del cliente    [Servicio1](../Service1_SolicitudServicioCliente/README.md)
-2. Recepción de solicitud y aviso al piloto       [Servicio2](../Service2_SolicitudServicioPiloto/README.md)
-3. Solicitud de ubicación (rastreo) desde la administración del servicio de carros    [Servicio3](../Service3_SolicitudRastreo/README.md)
+1. Solicitud de servicio por parte del cliente    [Servicio1](Service1_SolicitudServicioCliente/README.md)
+2. Recepción de solicitud y aviso al piloto       [Servicio2](Service2_SolicitudServicioPiloto/README.md)
+3. Solicitud de ubicación (rastreo) desde la administración del servicio de carros    [Servicio3](Service3_SolicitudRastreo/README.md)
 
 Debe ser realizado con servicios orquestados por medio de un ESB
 
