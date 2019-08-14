@@ -64,7 +64,7 @@ Debe ser realizado con servicios orquestados por medio de un ESB
 
 Se identifican segun requerimientos que existen 3 servicios que deben interactuar entre si, pero como mediador debe de existir un Enterprise Service Bus (ESB) quien se encargara de orquestar el funcionamiento de los servicios.
 
-![](Images/IMG9.jpg)
+![](Images/IMG10.jpg)
 ---
 
 ### Solucion:
