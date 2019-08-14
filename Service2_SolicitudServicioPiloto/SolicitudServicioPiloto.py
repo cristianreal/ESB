@@ -6,7 +6,7 @@ from flask import Flask, render_template, request, Response
 app = Flask(__name__)
 
 """
-    Se define la clase que contendra los metodos de nuestro servicio de Solicitud de Clientes.
+    Se define la clase que contendra los metodos de nuestro servicio de Solicitud de Pilotos.
     Importante:
     Todos los metodos de las clases deben de tener como parametro el "self", que es como el .this en Java
 """
