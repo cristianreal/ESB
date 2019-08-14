@@ -35,6 +35,7 @@ def RastreoPiloto():
     mensaje = request.args.get('Ubicacion')
     if mensaje == 'yes':
         response = requests.get('http://127.0.0.1:8080/SolicitudUbicacion', params={'Ubicacion': mensaje})
+        print(response.content)
         return response.content
     return '[RastreoPiloto]Solicitud de rastreo Invalida'
 

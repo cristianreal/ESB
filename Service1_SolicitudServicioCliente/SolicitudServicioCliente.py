@@ -43,6 +43,7 @@ def SolicitudCliente():
     if nombre == '' or correo == '' or ubicacion == '':
         return '[SolicitudCliente]Parametros incompletos'
     response = requests.get('http://127.0.0.1:8080/SolicitudServicio', params={'Nombre': nombre, 'Correo': correo,'Ubicacion': ubicacion})
+    print(response.content)
     return response.content
 
 """
