@@ -1,8 +1,9 @@
 """
 Para crear nuestro servicio es escencial importar las librerias de Flask, render_template, request, Response
 """
-
+import requests
 from flask import Flask, render_template, request, Response
+
 app = Flask(__name__)
 
 """
@@ -31,17 +32,18 @@ class WS1_SolicitudCliente():
     /SolicitudCliente?Nombre=Name1&Correo=Email1&Ubicacion=Avenue%205%20Zone%205
     
     De forma obligatoria deben de ingresar los tres parametros de lo contrario mostrara un mensaje de error.
+    
+    Este servicio enviara la solicitud del servicio y esperara que algun piloto le responda para que sepa que ya fue tomado en cuenta
 """
 @app.route('/SolicitudCliente', methods=['GET'])
 def SolicitudCliente():
-	nombre = request.args.get('Nombre')
-	correo = request.args.get('Correo')
-	ubicacion = request.args.get('Ubicacion')
-	if nombre == '' or correo == '' or ubicacion == '':
-		print('ERROR 400 - [SolicitudCliente]Parametros incompletos')
-		return 'ERROR 400 - [SolicitudCliente]Parametros incompletos'
-	print('Done 200 - Solicitud Cliente: '+'Solicitante: ' + nombre + 'Ubicacion: ' + ubicacion )
-	return 'Done 200 - Solicitud Cliente: '+'<br/>'+'Solicitante: ' + nombre + '<br/>' + 'Ubicacion: ' + ubicacion
+    nombre = request.args.get('Nombre')
+    correo = request.args.get('Correo')
+    ubicacion = request.args.get('Ubicacion')
+    if nombre == '' or correo == '' or ubicacion == '':
+        return '[SolicitudCliente]Parametros incompletos'
+    response = requests.get('http://127.0.0.1:8080/', params={'Nombre': nombre, 'Correo': correo,'Ubicacion': ubicacion})
+    return response.content
 
 """
     a continuacion se define que nuestro servicio se desplegara en el puerto 8050, la razon de utilizar un puerto diferente

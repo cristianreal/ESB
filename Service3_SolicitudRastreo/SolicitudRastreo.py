@@ -1,7 +1,7 @@
 """
 Para crear nuestro servicio es escencial importar las librerias de Flask, render_template, request, Response
 """
-
+import requests
 from flask import Flask, render_template, request, Response
 app = Flask(__name__)
 
@@ -34,10 +34,8 @@ class WS3_SolicitudRastreo():
 def RastreoPiloto():
 	mensaje = request.args.get('Ubicacion')
 	if mensaje == 'yes':
-		print('Done 200 - Hola soy el piloto Juan Perez y me encuentro en la siguiente direccion: '+'51°32\'01.4\'\'N 0°20\'37.5\'\'W')
-		return 'Done 200'+'<br/>'+' Hola soy el piloto Juan Perez y me encuentro en la siguiente direccion: '+'51°32\'01.4\'\'N 0°20\'37.5\'\'W'
-	print('ERROR 400 - Solicitud de rastreo Invalida')
-	return 'ERROR 400 - Solicitud de rastreo Invalida'
+		return '[RastreoPiloto]Hola soy el piloto Ronaldinho Gaucho Perez y me encuentro en la siguiente direccion: '+'51°32\'01.4\'\'N 0°20\'37.5\'\'W'
+	return '[RastreoPiloto]Solicitud de rastreo Invalida'
 
 """
     a continuacion se define que nuestro servicio se desplegara en el puerto 8060, la razon de utilizar un puerto diferente

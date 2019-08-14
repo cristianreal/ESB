@@ -1,8 +1,9 @@
 """
 Para crear nuestro servicio es escencial importar las librerias de Flask, render_template, request, Response
 """
-
+import requests
 from flask import Flask, render_template, request, Response
+
 app = Flask(__name__)
 
 """
@@ -33,6 +34,8 @@ class WS2_SolicitudPiloto():
     Este servicio servira para notificar al piloto sobre el viaje y que este le indique al solicitante que ya se dirige a su ubicacion.
 
     De forma obligatoria deben de ingresar los tres parametros de lo contrario mostrara un mensaje de error.
+
+    Este servicio respondera al cliente para que se entere que ya fue tomado en cuenta
 """
 @app.route('/SolicitudAvisoPiloto', methods=['GET'])
 def basic1():
@@ -40,10 +43,8 @@ def basic1():
     correo = request.args.get('Correo')
     ubicacion = request.args.get('Ubicacion')
     if nombre == '' or correo == '' or ubicacion == '':
-        print('ERROR 400 - [SolicitudPiloto]Parametros incompletos')
-        return 'ERROR 400 - [SolicitudPiloto]Parametros incompletos'
-    print('Done 200 - Solicitud y Aviso Piloto: '+'Hola '+ nombre+'!!! Mi nombre es Juan Perez y sere su piloto para el viaje solicitado hacia: '+ ubicacion)
-    return 'Done 200 - Solicitud y Aviso Piloto: '+'<br/>'+'Hola '+ nombre+'!!!'+'<br/>'+' Mi nombre es Juan Perez y sere su piloto para el viaje solicitado hacia: '+ ubicacion
+        return '[Solicitud y Aviso Piloto]Parametros incompletos'
+    return '[Solicitud y Aviso Piloto]: '+'Hola '+ nombre+'!!! Mi nombre es Ronaldinho Gaucho Perez y sere su piloto para el viaje solicitado hacia: '+ ubicacion
 
 """
     a continuacion se define que nuestro servicio se desplegara en el puerto 8060, la razon de utilizar un puerto diferente
