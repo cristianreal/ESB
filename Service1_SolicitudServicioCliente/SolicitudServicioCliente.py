@@ -40,8 +40,8 @@ def SolicitudCliente():
 	if nombre == '' or correo == '' or ubicacion == '':
 		print('ERROR 400 - [SolicitudCliente]Parametros incompletos')
 		return 'ERROR 400 - [SolicitudCliente]Parametros incompletos'
-	print('Done 200 - Solicitud Cliente: '+'<br/>'+'Nombre: ' + nombre + '<br/>'+ 'Correo: ' + correo + '<br/>' + 'Ubicacion: ' + ubicacion)
-	return 'Done 200 - Solicitud Cliente: '+'<br/>'+'Nombre: ' + nombre + '<br/>'+ 'Correo: ' + correo + '<br/>' + 'Ubicacion: ' + ubicacion
+	print('Done 200 - Solicitud Cliente: '+'Solicitante: ' + nombre + 'Ubicacion: ' + ubicacion )
+	return 'Done 200 - Solicitud Cliente: '+'<br/>'+'Solicitante: ' + nombre + '<br/>' + 'Ubicacion: ' + ubicacion
 
 """
     a continuacion se define que nuestro servicio se desplegara en el puerto 8050, la razon de utilizar un puerto diferente
