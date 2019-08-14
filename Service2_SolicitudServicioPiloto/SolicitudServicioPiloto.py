@@ -21,6 +21,11 @@ class WS2_SolicitudPiloto():
         self.Correo = Correo
         self.Nombre = Nombre
 
+
+
+
+
+
 """
     La ruta https://host:8060/SolicitudAvisoPiloto es de tipo GET que espera 3 parametros que se describen a continuacion:
 
@@ -38,13 +43,44 @@ class WS2_SolicitudPiloto():
     Este servicio respondera al cliente para que se entere que ya fue tomado en cuenta
 """
 @app.route('/SolicitudAvisoPiloto', methods=['GET'])
-def basic1():
+def SolicitudAvisoPiloto():
     nombre = request.args.get('Nombre')
     correo = request.args.get('Correo')
     ubicacion = request.args.get('Ubicacion')
     if nombre == '' or correo == '' or ubicacion == '':
         return '[Solicitud y Aviso Piloto]Parametros incompletos'
     return '[Solicitud y Aviso Piloto]: '+'Hola '+ nombre+'!!! Mi nombre es Ronaldinho Gaucho Perez y sere su piloto para el viaje solicitado hacia: '+ ubicacion
+
+
+
+
+
+
+"""
+    La ruta https://host:8060/UbicacionPiloto es de tipo GET que espera 1 parametro que se describe a continuacion:
+
+    1)  Ubicacion: Yes|No.
+
+    La forma de acceder a esta ruta es la siguiente:
+    https://host:8060/UbicacionPiloto?Ubicacion=[Yes|No]
+
+    Este servicio servira para notificar a la administracion la ubicacion del piloto.
+
+    De forma obligatoria deben de ingresar el parametro de lo contrario mostrara un mensaje de error.
+"""
+@app.route('/UbicacionPiloto', methods=['GET'])
+def UbicacionPiloto():
+	mensaje = request.args.get('Ubicacion')
+	if mensaje == 'yes':
+		return '[UbicacionPiloto]Hola soy el piloto Ronaldinho Gaucho Perez y me encuentro en la siguiente direccion: '+'51°32\'01.4\'\'N 0°20\'37.5\'\'W'
+	return '[UbicacionPiloto]Solicitud de rastreo Invalida'
+
+
+    
+
+
+
+
 
 """
     a continuacion se define que nuestro servicio se desplegara en el puerto 8060, la razon de utilizar un puerto diferente

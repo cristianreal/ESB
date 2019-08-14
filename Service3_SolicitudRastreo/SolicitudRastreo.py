@@ -19,12 +19,12 @@ class WS3_SolicitudRastreo():
         self.Ubicacion = Ubicacion
 
 """
-    La ruta https://host:8060/RastreoPiloto es de tipo GET que espera 1 parametro que se describe a continuacion:
+    La ruta https://host:8070/RastreoPiloto es de tipo GET que espera 1 parametro que se describe a continuacion:
 
     1)  Ubicacion: Yes|No.
 
     La forma de acceder a esta ruta es la siguiente:
-    https://host:8060/RastreoPiloto?Ubicacion=[Yes|No]
+    https://host:8070/RastreoPiloto?Ubicacion=[Yes|No]
 
     Este servicio servira para notificar a la administracion la ubicacion del piloto.
 
@@ -32,10 +32,11 @@ class WS3_SolicitudRastreo():
 """
 @app.route('/RastreoPiloto', methods=['GET'])
 def RastreoPiloto():
-	mensaje = request.args.get('Ubicacion')
-	if mensaje == 'yes':
-		return '[RastreoPiloto]Hola soy el piloto Ronaldinho Gaucho Perez y me encuentro en la siguiente direccion: '+'51°32\'01.4\'\'N 0°20\'37.5\'\'W'
-	return '[RastreoPiloto]Solicitud de rastreo Invalida'
+    mensaje = request.args.get('Ubicacion')
+    if mensaje == 'yes':
+        response = requests.get('http://127.0.0.1:8080/SolicitudUbicacion', params={'Ubicacion': mensaje})
+        return response.content
+    return '[RastreoPiloto]Solicitud de rastreo Invalida'
 
 """
     a continuacion se define que nuestro servicio se desplegara en el puerto 8060, la razon de utilizar un puerto diferente
