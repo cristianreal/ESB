@@ -19,12 +19,12 @@ class WS3_SolicitudRastreo():
         self.Ubicacion = Ubicacion
 
 """
-    La ruta /SolicitudAvisoPiloto es de tipo GET que espera 1 parametro que se describe a continuacion:
+    La ruta https://host:8060/RastreoPiloto es de tipo GET que espera 1 parametro que se describe a continuacion:
 
     1)  Ubicacion: Yes|No.
 
     La forma de acceder a esta ruta es la siguiente:
-    /RastreoPiloto?Ubicacion=[Yes|No]
+    https://host:8060/RastreoPiloto?Ubicacion=[Yes|No]
 
     Este servicio servira para notificar a la administracion la ubicacion del piloto.
 

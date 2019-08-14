@@ -22,14 +22,14 @@ class WS1_SolicitudCliente():
         self.Nombre = Nombre
 
 """
-    La ruta /SolicitudCliente es de tipo GET que espera 3 parametros que se describen a continuacion:
+    La ruta https://host:8050/SolicitudCliente es de tipo GET que espera 3 parametros que se describen a continuacion:
 
     1)  Nombre: De quien solicita el servicio.
     2)  Correo: Para comunicarnos con quien solicita el servicio.
     3)  Ubicacion: Para notificar a los pilotos el destino al que debe recoger a quien solicita el servicio.
 
     La forma de acceder a esta ruta es la siguiente:
-    /SolicitudCliente?Nombre=Name1&Correo=Email1&Ubicacion=Avenue%205%20Zone%205
+    https://host:8050/SolicitudCliente?Nombre=Name1&Correo=Email1&Ubicacion=Avenue%205%20Zone%205
     
     De forma obligatoria deben de ingresar los tres parametros de lo contrario mostrara un mensaje de error.
     
@@ -42,7 +42,7 @@ def SolicitudCliente():
     ubicacion = request.args.get('Ubicacion')
     if nombre == '' or correo == '' or ubicacion == '':
         return '[SolicitudCliente]Parametros incompletos'
-    response = requests.get('http://127.0.0.1:8080/', params={'Nombre': nombre, 'Correo': correo,'Ubicacion': ubicacion})
+    response = requests.get('http://127.0.0.1:8080/SolicitudServicio', params={'Nombre': nombre, 'Correo': correo,'Ubicacion': ubicacion})
     return response.content
 
 """

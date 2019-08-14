@@ -6,7 +6,7 @@ class ESB():
     def __init__(self, Nombre):
         self.Nombre = Nombre
 
-@app.route('/', methods=['GET'])
+@app.route('/SolicitudServicio', methods=['GET'])
 def RastreoPiloto():
     nombre = request.args.get('Nombre')
     correo = request.args.get('Correo')

@@ -22,14 +22,14 @@ class WS2_SolicitudPiloto():
         self.Nombre = Nombre
 
 """
-    La ruta /SolicitudAvisoPiloto es de tipo GET que espera 3 parametros que se describen a continuacion:
+    La ruta https://host:8060/SolicitudAvisoPiloto es de tipo GET que espera 3 parametros que se describen a continuacion:
 
     1)  Nombre: A quien se le prestara el servicio.
     2)  Correo: Para comunicarnos con quien solicita el servicio.
     3)  Ubicacion: Para dirigirnos a recogerla.
 
     La forma de acceder a esta ruta es la siguiente:
-    /SolicitudAvisoPiloto?Nombre=Name1&Correo=Email1&Ubicacion=Address
+    https://host:8060/SolicitudAvisoPiloto?Nombre=Name1&Correo=Email1&Ubicacion=Address
     
     Este servicio servira para notificar al piloto sobre el viaje y que este le indique al solicitante que ya se dirige a su ubicacion.
 
