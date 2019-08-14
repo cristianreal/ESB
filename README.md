@@ -83,4 +83,5 @@ En la siguiente imagen podemos observar la solucion propuesta para la arquitectu
 4.  https://palletsprojects.com/p/flask/
 5.  https://palletsprojects.com/p/jinja/
 
-
+# VIDEO:
+[SA_Video_Tarea2_3](https://youtu.be/6zjsbMv9oKY)
