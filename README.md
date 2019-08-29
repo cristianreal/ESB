@@ -2,53 +2,26 @@
 ===
 ## BPEL
 
+Por inconveniente con la herramienta se procedio a cambiar los servicios de REST a SOAP para luego que estos servicios se comunicaran con el orquestador BPEL con los demas servicios.
+
 Para desarrollar esta tarea utilizamos lo siguiente:
   1. Windows10 como Sistema Operativo.
-  2. Python V3.7.4 como lenguaje de programacion.
-  3. Flask como microframework para crear servicios.
+  3. Java Enviroment (JDK y JRE).
+  2. Eclipse Oxygen.
+  3. ASP.net para crear servicios SOAP.
 ---
 
 ### Configuracion Basica:
 
-  1.  Crear un proyecto que contendra nuestra solucion.
-  2.  Crear el/los archivos que compondra nuestra solucion.
-  3.  Abrir una terminal dentro de nuestro proyecto.
-  4.  Crear un Entorno Virtual, con el siguiente comando dentro de nuestra consola
+  1.  Crear un proyecto en .NET que contendra nuestra solucion con los servicios.
+  2.  Crear un proyecto por cada servicio que se va a consumir en Eclipse oxygen.
+  4.  Modificar el proceso BPEL para definir las reglas de negocio.
+  5.  Al terminar de realizar los servicios se deben descargar el WSDL que este nos crea para luego adjuntarlo al proyecto de BPEL
+  
   ```
-     C:\Users\Name\Desktop\NameProject>py -3 -m venv venv
+     
   ```
-  5.  Activar el Entorno Virtual creado, con el siguiente comando dentro de nuestra consola
-  ```
-    C:\Users\Name\Desktop\NameProject>venv\Scripts\activate
-  ```
-  6.  Instalar la libreria de Flask para nuestros servicios, con el siguiente comando dentro de nuestra consola
-  ```
-    (venv) C:\Users\Name\Desktop\NameProject>pip install Flask
-  ```
-  7.  Identificar el archivo que contendra el servicio, con el siguiente comando dentro de nuestra consola
-  ```
-    (venv) C:\Users\Name\Desktop\NameProject>set FLASK_APP=<NombreArchivo>.py
-  ```
-  8.  Ejecutar el servicio, con el siguiente comando dentro de nuestra consola
-  ```
-    (venv) C:\Users\Name\Desktop\NameProject>python -m flask run
-     * Serving Flask app "Prueba.py"
-     * Environment: production
-       WARNING: This is a development server. Do not use it in a production deployment.
-       Use a production WSGI server instead.
-     * Debug mode: off
-     * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-  ```
-  9.  Parar el servicio, con el siguiente comando dentro de nuestra consola
-  ```
-    Press CTRL+C to quit
-  ```
-  10.  Salir del Entorno Virtual, con el siguiente comando dentro de nuestra consola
-  ```
-    (venv) C:\Users\Name\Desktop\NameProject>deactivate
-    
-    C:\Users\Name\Desktop\NameProject>
-  ```
+
 ---
 ### Enunciado:
 Realizar una aplicación SOA para simular los siguientes servicios de carros tipo Uber:
@@ -63,7 +36,7 @@ Debe ser realizado con servicios orquestados por medio de un ESB
 
 ### Desarrollo del problema:
 
-Se identifican segun requerimientos que existen 3 servicios que deben interactuar entre si, pero como mediador debe de existir un Enterprise Service Bus (ESB) quien se encargara de orquestar el funcionamiento de los servicios.
+Se identifican segun requerimientos que existen 3 servicios que deben interactuar entre si, pero como mediador debe de existir un Orquestador (BPEL) quien se encargara de orquestar el funcionamiento de los servicios.
 
 ![](Images/IMG10.jpg)
 ---
@@ -78,11 +51,11 @@ En la siguiente imagen podemos observar la solucion propuesta para la arquitectu
 
 ### ANEXOS:
 
-1.  https://werkzeug.palletsprojects.com/en/0.14.x/serving/
-2.  https://www.python.org/downloads/
-3.  https://flask.palletsprojects.com/en/1.1.x/
-4.  https://palletsprojects.com/p/flask/
-5.  https://palletsprojects.com/p/jinja/
+1.  https://www.eclipse.org/downloads/
+2.  https://www.eclipse.org/bpel/
+3.  https://www.eclipse.org/bpel/users/howto/ode.php
+4.  http://tomcat.apache.org/
+5.  https://ode.apache.org/
 
 # VIDEO:
-[SA_Video_Tarea2_3](https://youtu.be/6zjsbMv9oKY)
+[SA_Video_Tarea2_3](https://www.youtube.com/watch?v=nJOGVfv9cVY)
