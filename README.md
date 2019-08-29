@@ -17,6 +17,7 @@ Para desarrollar esta tarea utilizamos lo siguiente:
   2.  Crear un proyecto por cada servicio que se va a consumir en Eclipse oxygen.
   4.  Modificar el proceso BPEL para definir las reglas de negocio.
   5.  Al terminar de realizar los servicios se deben descargar el WSDL que este nos crea para luego adjuntarlo al proyecto de BPEL
+  6.  La solucion completa se encuentra en la siguiente [Carpeta](BPEL_TAREA4)
   
   ```
      
