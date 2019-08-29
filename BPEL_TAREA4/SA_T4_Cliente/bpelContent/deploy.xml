@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:ClienteProceso.localhost="http://ClienteProceso.localhost" xmlns:tempuri.org="http://tempuri.org/">
+  <process name="ClienteProceso.localhost:ClienteProceso">
+    <active>true</active>
+    <retired>false</retired>
+    <process-events generate="all"/>
+    <provide partnerLink="client">
+      <service name="ClienteProceso.localhost:ClienteProcesoService" port="ClienteProcesoPort"/>
+    </provide>
+    <invoke partnerLink="PilotoPL">
+      <service name="tempuri.org:ServicioPiloto" port="ServicioPilotoSoap"/>
+    </invoke>
+  </process>
+</deploy>
