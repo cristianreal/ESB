@@ -1,4 +1,4 @@
-[SA] Aplicacion SOA con Microservicios y ESB
+[SA] Aplicacion SOA con Microservicios y BPEL
 ===
 ## BPEL
 
